@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,32 @@
     <!-- libreria Vue -->
     <script src="https://unpkg.com/vue@3"></script>
 
+    <div id="app" style="text-align: center; color: white">
 
+        <h1 style="padding: 20px;">
+            {{ saluto }}
+        </h1>
+
+        <img :src="img" alt="" style="display: inline-block">
+
+    </div>
+
+
+
+    <script>
+
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+
+                    saluto: `"Hello World"`,
+                    img: "https://lh3.googleusercontent.com/proxy/ekWwkE_QkDjA1UjCK-lH8d273GnficwEZ9JdA5Bj-uXC2zEGU_ioZtsUiD0w01Tx8mrMN0gEwR3PVNZ8m17FCBSowGd-g7h_m0ZPa4g8G2fY7qLqouvpKifpPJZFz_LLFllHGWKB"
+                }
+            }
+         }).mount("#app");
+    </script>
 
 </body>
 </html>
